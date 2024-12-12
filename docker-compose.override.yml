@@ -1,0 +1,38 @@
+version: "3.4"
+
+# Development environment override
+services:
+  php:
+    volumes:
+      - ./:/srv/api:rw,cached
+      - ./docker/php/conf.d/api-platform.dev.ini:/usr/local/etc/php/conf.d/api-platform.ini
+      # if you develop on Linux, you may use a bind-mounted host directory instead
+      # - ./api/var:/srv/api/var:rw
+    environment:
+      APP_ENV: dev
+
+  caddy:
+    environment:
+      DEBUG: debug
+    volumes:
+      - ./docker/caddy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - ./public:/srv/api/public:ro
+    ports:
+      # HTTP
+      - target: 80
+        published: 80
+        protocol: tcp
+      # HTTPS
+      - target: 443
+        published: 443
+        protocol: tcp
+      # HTTP/3
+      - target: 443
+        published: 443
+        protocol: udp
+
+  database:
+    ports:
+      - target: 5432
+        published: 5432
+        protocol: tcp

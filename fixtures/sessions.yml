@@ -1,0 +1,31 @@
+\App\Entity\Session:
+  session_a:
+    uuid: <(new \Symfony\Component\Uid\UuidV4('3fa85f64-5717-4562-b3fc-2c963f66afa6'))>
+    username: "spoody"
+    hostname: "bocal-imac"
+    startedAt: <(new \DateTimeImmutable('2021-12-01 13:37'))>
+    endedAt: <(new \DateTimeImmutable('2021-12-01 14:37'))>
+  session_b:
+    uuid: <(new \Symfony\Component\Uid\UuidV4())>
+    username: "spoody"
+    hostname: "bocal-imac"
+    startedAt: <(new \DateTimeImmutable('2021-12-05 13:37'))>
+    endedAt: <(new \DateTimeImmutable('2021-12-05 15:37'))>
+  session_c:
+    uuid: <(new \Symfony\Component\Uid\UuidV4())>
+    username: "someone"
+    hostname: "bocal-imac"
+    startedAt: <(new \DateTimeImmutable('2021-12-08 13:37'))>
+    endedAt: <(new \DateTimeImmutable('2021-12-08 14:07'))>
+  session_d:
+    uuid: <(new \Symfony\Component\Uid\UuidV4())>
+    username: "someone"
+    hostname: "bocal-imac"
+    startedAt: <(new \DateTimeImmutable('2021-12-09 13:37'))>
+    endedAt: null
+  session_e:
+    uuid: <(new \Symfony\Component\Uid\UuidV4())>
+    username: "spoody"
+    hostname: "bocal-imac"
+    startedAt: <(new \DateTimeImmutable('2021-12-01 22:37'))>
+    endedAt: <(new \DateTimeImmutable('2021-12-02 01:37'))>

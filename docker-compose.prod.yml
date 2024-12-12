@@ -1,0 +1,15 @@
+version: "3.4"
+
+# Production environment override
+services:
+  php:
+    environment:
+      APP_ENV: prod
+      APP_SECRET: ${APP_SECRET}
+
+  caddy:
+    environment:
+      CUSTOM_TLS: "tls /etc/ssl/custom_certificate.crt /etc/ssl/private/custom_certificate.key"
+    volumes:
+      - /etc/ssl/${SERVER_NAME}.crt:/etc/ssl/custom_certificate.crt:ro
+      - /etc/ssl/private/${SERVER_NAME}.key:/etc/ssl/private/custom_certificate.key:ro

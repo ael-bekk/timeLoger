@@ -1,0 +1,28 @@
+{
+    # Debug
+    {$DEBUG}
+    # HTTP/3 support
+    servers {
+        protocol {
+            experimental_http3
+        }
+    }
+}
+
+{$SERVER_NAME}
+
+log
+
+#@symfony {
+#    path_regexp symfony ^\/(api|auth|bundles|_wdt|_profiler)(.+)?
+#}
+
+{$CUSTOM_TLS}
+
+handle  {
+    root * /srv/api/public
+
+    php_fastcgi unix//var/run/php/php-fpm.sock
+    encode zstd gzip
+    file_server
+}

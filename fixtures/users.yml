@@ -1,0 +1,25 @@
+\App\Entity\User:
+  root:
+    username: 'root'
+    hashedToken: "4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2"
+    isDisabled: false
+    roles: ['ROLE_LOGTIME_READ', 'ROLE_SESSION_READ', 'ROLE_SESSION_WRITE']
+  no_roles:
+    username: 'no_roles'
+    hashedToken: "bf6da37da960b949956f6a7c8809cbab1a32d3f7aa46f921743eeafd2b3b9958"
+    isDisabled: false
+  logtime_read:
+    username: 'logtime_read'
+    hashedToken: "87baa5fdd08db12feb68e067d6170e594690697a4491a40da1ba460d5868b0ad"
+    isDisabled: false
+    roles: ['ROLE_LOGTIME_READ']
+  session_read:
+    username: 'session_read'
+    hashedToken: "ecc4067c21d37e93c2adef68afd96cd3de0b9e85d8907777e6adeb0a114ea1f9"
+    isDisabled: false
+    roles: ['ROLE_SESSION_READ']
+  session_write:
+    username: 'session_write'
+    hashedToken: "f11f5fe0d346a0d0b6777ecf9f13795bbdf5f8258bb2a008422600db584a8ef6"
+    isDisabled: false
+    roles: ['ROLE_SESSION_WRITE']
